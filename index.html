@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reinforcement Learning Pathfinder</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .bg-dark {
+            background-color: #1e1e1e;
+        }
+        .text-primary {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body class="bg-dark">
+
+    <header class="bg-gray-800 text-white p-6">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold">Reinforcement Learning Pathfinder</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto my-10">
+        <section class="bg-gray-900 p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold mb-4 text-primary">Project Overview</h2>
+            <p class="mb-4">This project, developed by Leela and Subhang, implements a Q-learning algorithm to find the shortest path in a grid environment. It includes a graphical user interface (GUI) using Tkinter to visualize the agent's learning and testing process.</p>
+            <button id="view-repo" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">View GitHub Repository</button>
+        </section>
+
+        <section class="mt-10">
+            <h2 class="text-2xl font-bold mb-4 text-primary">Future Implementations</h2>
+            <ul class="bg-gray-900 p-6 rounded-lg shadow-lg space-y-4">
+                <li class="p-4 bg-gray-800 rounded-lg shadow">
+                    <h3 class="text-xl font-bold mb-2">Deep Q-Network (DQN) Implementation</h3>
+                    <p>We plan to enhance the project by incorporating Deep Q-Networks (DQNs) for more complex environments and better performance.</p>
+                </li>
+                <li class="p-4 bg-gray-800 rounded-lg shadow">
+                    <h3 class="text-xl font-bold mb-2">Dynamic Obstacle Handling</h3>
+                    <p>Future versions will include the ability to handle dynamic obstacles that move within the grid environment.</p>
+                </li>
+                <li class="p-4 bg-gray-800 rounded-lg shadow">
+                    <h3 class="text-xl font-bold mb-2">Multi-Agent Collaboration</h3>
+                    <p>Introducing multi-agent collaboration to solve pathfinding problems in more complex scenarios.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="mt-10">
+            <h2 class="text-2xl font-bold mb-4 text-primary">Upcoming Projects</h2>
+            <ul id="projects-list" class="bg-gray-900 p-6 rounded-lg shadow-lg space-y-4">
+                <!-- Upcoming projects will be inserted here by JavaScript -->
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-6 mt-10">
+        <div class="container mx-auto">
+            <p class="text-center">© 2024 Leela and Subhang. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('view-repo').addEventListener('click', function() {
+            window.open('https://github.com/yourusername/yourrepository', '_blank');
+        });
+
+        const upcomingProjects = [
+            { title: 'Next Project 1', description: 'Description of the next project 1.' },
+            { title: 'Next Project 2', description: 'Description of the next project 2.' },
+            { title: 'Next Project 3', description: 'Description of the next project 3.' }
+        ];
+
+        const projectsList = document.getElementById('projects-list');
+
+        upcomingProjects.forEach(project => {
+            const projectItem = document.createElement('li');
+            projectItem.className = 'p-4 bg-gray-800 rounded-lg shadow';
+            projectItem.innerHTML = `
+                <h3 class="text-xl font-bold mb-2">${project.title}</h3>
+                <p>${project.description}</p>
+            `;
+            projectsList.appendChild(projectItem);
+        });
+    </script>
+
+</body>
+</html>
